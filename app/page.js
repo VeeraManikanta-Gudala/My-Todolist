@@ -32,23 +32,23 @@ if(items.length>0){
   return (
     <div>
      
-      <h1 className='py-4 px-1 bg-black text-white font-bold text-center text-2xl'>My Todolist</h1>
+      <h1 className='py-4 px-1 bg-black text-white shadow-lg font-bold text-center text-2xl'>My Todolist</h1>
     <div className='flex items-center'>
       <form onSubmit={handleSubmit} className='text-center text-4xl m-auto'>
-        <input type='text' placeholder='title' className='border-black shadow-black px-8 py-5 m-3 text-xl'
+        <input type='text' placeholder='title' className='border-black shadow-lg px-8 py-5 m-2 text-xl'
             value={title}
           onChange={(e) => {
             setTitle(e.target.value);
           }}
         ></input>
-        <input type='text' placeholder='description' className=' border-3 m-3 shadow-black border-black px-8 py-5 text-xl'
+        <input type='text' placeholder='description' className=' border-3 m-2 shadow-lg border-black px-8 py-5 text-xl'
             value={description}
           onChange={(e) => {
             setDescription(e.target.value);
           }}
         ></input>
         <hr />
-      <button className='bg-black text-white font-bold text-xl px-4 py-2 mx-auto my-3 rounded'>Add</button>      
+      <button className='bg-black text-white font-bold shadow-lg text-xl px-4 py-2 mx-auto my-3 rounded'>Add</button>      
       </form>
       </div>
       <div className='p-4 bg-black text-white w-2/3 m-auto rounded-md'>
