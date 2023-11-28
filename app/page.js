@@ -17,6 +17,9 @@ const page = () => {
     newCopy.splice(i,1)
     setItems(newCopy);
   }
+  const handleEdit = (i) => {
+    console.log(i.description);
+  }
   let display = <h3>No tasks available</h3>
 if(items.length>0){
   display = items.map((t,i)=> {
@@ -24,6 +27,8 @@ if(items.length>0){
       <div key={i} className='flex justify-between mb-9 h-10'>
         <h3 className='text-2xl font-bold'>{t.title}</h3>
         <h5 className='font-medium'>{t.description}</h5>
+        <button onClick={()=>handleEdit(i)} className='py-2 px-4 bg-red-600 text-white rounded-md'>edit</button>
+
         <button onClick={()=>handleDelete(i)} className='py-2 px-4 bg-red-600 text-white rounded-md'>Delete</button>
       </div>
     )
@@ -32,28 +37,33 @@ if(items.length>0){
   return (
     <div>
      
-      <h1 className='py-4 px-1 bg-black text-white font-bold text-center text-2xl'>My Todolist</h1>
-    <div className='flex items-center'>
-      <form onSubmit={handleSubmit} className='text-center text-4xl m-auto'>
-        <input type='text' placeholder='title' className='border-black shadow-md px-11 py-6 m-3 text-2xl'
+      <div className='p-3 rounded-b-md bg-black text-white font-bold text-center sm:text-center'>My Todolist</div>
+     
+      <form onSubmit={handleSubmit} className='flex flex-col justify-center text-xl snap-center m-auto'>
+        <input type='text' placeholder='Title' className='border-black text-center shadow-lg px-5 py-2 m-auto
+        mt-2 text-xl sm:w-[85%]'
             value={title}
           onChange={(e) => {
             setTitle(e.target.value);
           }}
         ></input>
-        <input type='text' placeholder='description' className=' border-3 m-3 shadow-md border-black px-11 py-6 text-2xl'
+        <input type='text' placeholder='Description' className='border-black text-center shadow-lg px-5 py-2 
+        mt-2 m-auto text-xl sm:w-[85%]'
             value={description}
           onChange={(e) => {
             setDescription(e.target.value);
           }}
         ></input>
         <hr />
-      <button className='bg-black text-white font-bold text-xl px-4 py-2 mx-auto my-3 rounded'>Add</button>      
+        <div className='flex justify-center'>
+      <button className='bg-black text-white font-bold shadow-lg text-xl px-4 py-2 m-auto rounded'>Add</button>      
+
+        </div>
       </form>
-      </div>
+      <hr />          
       <div className='p-4 bg-black text-white w-2/3 m-auto rounded-md'>
           {display}
-      </div>
+      </div> 
     </div>
   )
 }
