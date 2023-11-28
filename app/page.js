@@ -27,7 +27,7 @@ if(items.length>0){
       <div key={i} className='flex justify-between mb-9 h-10'>
         <h3 className='text-2xl font-bold'>{t.title}</h3>
         <h5 className='font-medium'>{t.description}</h5>
-        <button onClick={()=>handleEdit(i)} className='py-2 px-4 bg-red-600 text-white rounded-md'>edit</button>
+        <button onClick={()=>handleEdit(i)} className='py-2 px-4 bg-red-600 text-white rounded-md '>edit</button>
 
         <button onClick={()=>handleDelete(i)} className='py-2 px-4 bg-red-600 text-white rounded-md'>Delete</button>
       </div>
@@ -46,17 +46,17 @@ if(items.length>0){
             setTitle(e.target.value);
           }}
         ></input>
-        <input type='text' placeholder='description' className=' border-3 m-3 shadow-md border-black px-11 py-6 text-2xl'
+        <input type='text' placeholder='description' className=' border-3 m-3 shadow-md border-black px-11 py-6 text-2xl w-3/4'
             value={description}
           onChange={(e) => {
             setDescription(e.target.value);
           }}
         ></input>
         <hr />
-      <button className='bg-black text-white font-bold text-xl px-4 py-2 mx-auto my-3 rounded'>Add</button>      
+      <button className='bg-black text-white font-bold text-xl px-4 py-2 mx-auto my-3 rounded w-3/4'>Add</button>      
       </form>
       </div>
-      <div className='p-4 bg-black text-white w-2/3 m-auto rounded-md'>
+      <div className='p-4 bg-black text-white w-2/3 m-auto rounded-md w-full sm:w-3/4'>
           {display}
       </div> 
     </div>
