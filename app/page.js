@@ -17,9 +17,6 @@ const page = () => {
     newCopy.splice(i,1)
     setItems(newCopy);
   }
-  const handleEdit = (i) => {
-    console.log(i.description);
-  }
   let display = <h3>No tasks available</h3>
 if(items.length>0){
   display = items.map((t,i)=> {
@@ -27,8 +24,7 @@ if(items.length>0){
       <div key={i} className='flex justify-between mb-9 h-10'>
         <h3 className='text-2xl font-bold'>{t.title}</h3>
         <h5 className='font-medium'>{t.description}</h5>
-        <button onClick={()=>handleEdit(i)} className='py-2 px-4 bg-red-600 text-white rounded-md '>edit</button>
-
+    
         <button onClick={()=>handleDelete(i)} className='py-2 px-4 bg-red-600 text-white rounded-md'>Delete</button>
       </div>
     )
