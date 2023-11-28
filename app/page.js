@@ -49,7 +49,7 @@ if(items.length>0){
           }}
         ></input>
         <hr />
-      <button className='bg-green text-white font-bold text-xl px-4 py-2 mx-auto my-3 rounded'>Add</button>      
+      <button className='bg-red text-white font-bold text-xl px-4 py-2 mx-auto my-3 rounded'>Add</button>      
       </form>
       </div>
       <div className='p-4 bg-black text-white w-2/3 m-auto rounded-md w-full sm:w-3/4'>
