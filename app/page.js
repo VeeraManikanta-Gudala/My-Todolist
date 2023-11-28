@@ -36,7 +36,7 @@ if(items.length>0){
       <h1 className='py-4 px-1 bg-black text-white font-bold text-center text-2xl'>My Todolist</h1>
     <div className='flex items-center'>
       <form onSubmit={handleSubmit} className='text-center text-4xl m-auto'>
-        <input type='text' placeholder='title' className='border-black shadow-md px-11 py-6 m-3 text-2xl'
+        <input type='text' placeholder='title' className='border-black shadow-md px-11 py-6 m-3 text-2xl w-3/4'
             value={title}
           onChange={(e) => {
             setTitle(e.target.value);
